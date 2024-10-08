@@ -23,13 +23,8 @@ body {
   flex-direction: column;
 }
 a {
-    text-decoration: none;
-    &:is(:hover, :focus),
-    &:visited {
-      color: var(--gray-950);
-    }
-  }
-
+  text-decoration: none;
+}
 main {
   margin: auto;
   background: var(--white);
@@ -64,12 +59,15 @@ header {
   h1 {
     font-size: var(--font-size-title);
     font-weight: var(--font-weight-800);
-    &:is(:hover){
+    a {
+      color: var(--gray-950);
+      &:is(:hover) {
         color: var(--yellow);
         cursor: pointer;
+      }
     }
   }
-  p{
+  p {
     color: var(--gray-500);
   }
 }
@@ -79,5 +77,11 @@ header {
   gap: 0.75rem;
 }
 .attribution {
-    margin: 1rem;
+  margin: 1rem;
+  a {
+    &:is(:hover, :focus),
+    &:visited {
+      color: var(--gray-950);
+    }
   }
+}
