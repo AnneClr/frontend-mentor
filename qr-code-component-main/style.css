@@ -10,6 +10,7 @@
   --font-weight-400: 400;
   --font-weight-700: 700;
   --font-size-paragraph: 15px;
+  --font-size-title: 1.5rem;
 }
 a {
   text-decoration: none;
@@ -20,16 +21,19 @@ a {
 }
 
 body {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
   min-height: 100vh;
   background-color: var(--light-gray);
   font-family: var(--font-family);
   font-weight: var(--font-weight-400);
   text-align: center;
 }
-
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
 .qr-code-container {
   display: flex;
   flex-direction: column;
@@ -41,7 +45,9 @@ body {
   box-shadow: 1px 1px 20px var(--grayish-blue);
   max-width: 320px;
 }
-
+h1{
+  font-size: var(--font-size-title);
+}
 .qr-code-img-container {
   border-radius: 10px;
   width: 18rem;
@@ -59,8 +65,6 @@ body {
   margin-bottom: 26px;
   padding: 0 0.3rem;
 }
-
-
 
 .attribution {
   margin: 1rem;
