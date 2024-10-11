@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --font-family-sans: "Outfit", sans-serif;
+  --font-family-serif: "Young Serif", serif;
+  --white: hsl(0, 0%, 100%);
+  --stone-100: hsl(30, 54%, 90%);
+  --stone-150: hsl(30, 18%, 87%);
+  --stone-600: hsl(30, 10%, 34%);
+  --stone-900: hsl(24, 5%, 18%);
+  --brown-800: hsl(14, 45%, 36%);
+  --rose-800: hsl(332, 51%, 32%);
+  --rose-50: hsl(330, 100%, 98%);
+  --font-weight-500: 500;
+  --font-weight-400: 400;
+  --font-weight-600: 600;
+  --font-weight-700: 700;
+}
+body {
+  min-height: 100vh;
+  background-color: var(--stone-100);
+  font-family: var(--font-family-sans);
+  color: var(--stone-600);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+a {
+  text-decoration: none;
+}
+h1 {
+  font-family: var(--font-family-serif);
+  font-weight: var(--font-weight-600);
+  color: var(--stone-900);
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-family: var(--font-family-serif);
+  font-weight: var(--font-weight-400);
+  font-size: 1.5rem;
+  color: var(--brown-800);
+}
+span {
+  font-weight: var(--font-weight-600);
+}
+main {
+  margin: 4rem auto;
+  background: var(--white);
+  width: 55vw;
+  /* padding: 1.7rem; */
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  padding: 1.7rem;
+  img {
+    width: 100%;
+    border-radius: 0.5rem;
+  /* margin: 1.7rem; */
+
+  }
+}
+
+.recipe-title {
+  padding: 1rem 0;
+  margin: 0 1.7rem;
+  h1 {
+    margin-bottom: 0.8rem;
+  }
+  p {
+    color: var(--stone-600);
+    padding: 0.5rem 0;
+  }
+}
+
+.recipe-details {
+  background: var(--rose-50);
+  border-radius: 0.5rem;
+  padding: 1.3rem;
+  margin: 0 1.7rem;
+
+  .recipe-details-title {
+    font-family: var(--font-family-sans);
+    color: var(--rose-800);
+    font-weight: var(--font-weight-600);
+    font-size: 1rem;
+    padding: 0;
+  }
+  ul {
+    list-style-type: none;
+    margin-top: 0.8rem;
+    li {
+      margin-top: 0.5rem;
+      &:before {
+        content: "\2022";
+        color: var(--rose-800);
+        font-weight: var(--font-weight-700);
+        width: 1em;
+        margin: 0 1.3rem 0 0.6rem;
+      }
+    }
+  }
+}
+
+.recipe-ingredients {
+  border-bottom: 1px solid var(--stone-150);
+  padding: 2rem 0;
+  margin: 0 1.7rem;
+
+  h2 {
+    margin-bottom: 1.2rem;
+  }
+  .ingredients-list {
+    list-style-type: none;
+    li {
+      margin-top: 0.5rem;
+      &:before {
+        content: "\2022";
+        color: var(--rose-800);
+        font-weight: var(--font-weight-700);
+        width: 1em;
+        margin: 0 1.4rem 0 0.2rem;
+      }
+    }
+  }
+}
+.recipe-instructions {
+  border-bottom: 1px solid var(--stone-150);
+  padding: 1rem 0;
+  margin: 0 1.7rem;
+
+  h2 {
+    margin-bottom: 1.2rem;
+  }
+  .instructions-list {
+    list-style-type: none;
+    counter-reset: li;
+    li {
+      counter-increment: li;
+      margin-bottom: 0.8rem;
+      padding-left: 2em;
+      position: relative;
+      &::before {
+        position: absolute;
+        left: 0;
+        content: counter(li) ".";
+        color: var(--rose-800);
+        font-weight: var(--font-weight-700);
+        width: 1em;
+        margin-right: 1rem;
+        text-align: left;
+        display: inline-block;
+      }
+    }
+  }
+}
+.recipe-nutrition {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin: 0 1.7rem;
+
+  h2 {
+    margin-bottom: 1.2rem;
+  }
+  p {
+    margin-bottom: 1rem;
+  }
+  table {
+    width: 100%;
+  }
+  .nutrition-list {
+    td {
+      border-collapse: collapse;
+      border-bottom: 1px solid var(--stone-150);
+      padding: 1rem 0;
+      width: 50%;
+      &:nth-of-type(2) {
+        color: var(--rose-800);
+        font-weight: var(--font-weight-700);
+      }
+      &:nth-of-type(odd) {
+        padding-left: 2rem;
+      }
+    }
+    .fat {
+      border-bottom: none;
+    }
+  }
+}
+
+.attribution {
+  margin: 1rem;
+  color: var(--rose-800);
+
+  a {
+    &:is(:hover, :focus),
+    &:visited {
+      color: var(--rose-800);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+  }
+}
+header{
+  padding: 0;
+  img{
+    border-radius: 0;
+  }
+}
+.attribution {
+  display: none;
+}
