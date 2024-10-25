@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --font-family-sans: "Outfit", sans-serif;
+  --font-family-serif: "Young Serif", serif;
+  --white: hsl(0, 0%, 100%);
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 18%, 87%);
+  --dark-blue: hsl(212, 21%, 14%);
+  --grayish-blue: hsl(228, 12%, 48%);
+  --font-weight-500: 500;
+  --font-weight--700: 700;
+  --font-sans: "Montserrat", sans-serif;
+  --font-serif: "Fraunces", serif;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--cream);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.4rem;
+  font-family: var(--font-sans);
+  color: var(--grayish-blue);
+  font-weight: var(--font-weight-500);
+}
+
+main {
+  border-radius: 1rem;
+  background: var(--white);
+  margin: 1.5rem;
+}
+header {
+  /* height: 100%; */
+  img {
+    max-width: 100%;
+    object-fit: cover;
+    height: auto;
+    border-radius: 1rem 1rem 0 0;
+  }
+}
+.content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  .category {
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+  }
+  .title-perfume {
+    font-family: var(--font-serif);
+    color: var(--dark-blue);
+  }
+  .price-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    .price {
+      font-size: 2.2rem;
+      font-family: var(--font-serif);
+      color: var(--dark-cyan);
+      font-weight: var(--font-weight--700);
+    }
+    .old-price {
+      text-decoration: line-through;
+    }
+  }
+  button {
+    background: var(--dark-cyan);
+    border: none;
+    border-radius: 0.5rem;
+    color: var(--white);
+    font-weight: var(--font-weight--700);
+    padding: 1rem;
+    align-self: center;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+.attribution {
+  margin: 1rem;
+  color: var(--rose-800);
+  text-align: center;
+  a {
+    &:is(:hover, :focus),
+    &:visited {
+      color: var(--rose-800);
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    display: flex;
+    max-width: 40rem;
+    header {
+      width: 50%;
+      img {
+        height: 100%;
+        border-radius: 1rem 0 0 1rem;
+      }
+    }
+    .content {
+      padding: 1.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 2rem;
+      width: 50%;
+      .title-perfume {
+        font-size: 2.3rem;
+      }
+      .description {
+        line-height: 1.6rem;
+      }
+    }
+  }
+}
