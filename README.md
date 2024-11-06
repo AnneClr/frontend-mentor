@@ -6,4 +6,4 @@ Links to visit each project :
 - [Blog preview card](https://anneclr.github.io/frontend-mentor/blog-preview-card-main/)
 - [Social links profile](https://anneclr.github.io/frontend-mentor/social-links-profile-main/)
 - [Recipe page](https://anneclr.github.io/frontend-mentor/recipe-page-main/)
-- [Recipe page](https://anneclr.github.io/frontend-mentor/product-preview-card-component-main/)
+- [Product preview card](https://anneclr.github.io/frontend-mentor/product-preview-card-component-main/)
